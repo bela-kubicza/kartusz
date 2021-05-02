@@ -1,0 +1,158 @@
+.col {
+    padding: 20px 5px;
+    width: 50%
+}
+
+@media (min-width: 576px) { 
+    .col {
+        width: 50%
+    }
+ }
+
+
+@media (min-width: 768px) { 
+    .col {
+        width: 33.333%
+    }
+}
+
+
+@media (min-width: 992px) {
+    .col {
+        width: 25%
+    }
+}
+
+
+@media (min-width: 1200px) { 
+    .col {
+        width: 20%
+    }
+}
+
+
+@media (min-width: 1400px) { 
+    .col {
+        width: 16.6667%
+    }
+ }
+
+
+.casino-game-wrapper {
+    position: relative; 
+    width: 100%;
+    height: 0;
+    padding-bottom: 59%;
+    cursor: pointer;
+}
+
+.casino-game-wrapper.ribbon-new::before {
+    content: '';
+    position: absolute;
+    top: -5%;
+    right: -4%;
+    width: 100%;
+    height: 75%;
+    background-image: url(/assets/images/ribbon-new.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    z-index: 5;
+}
+
+.casino-game-wrapper.ribbon-top::after {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: -3%;
+    width: 100%;
+    height: 75%;
+    background-image: url(/assets/images/ribbon-top.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    z-index: 5;
+}
+
+.casino-game {
+    position: absolute;
+    border-radius: 1vh;    
+    overflow: hidden;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    
+}
+
+.casino-game .jackpot {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+ 
+}
+
+.casino-game .game-name {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top:100%;
+    left:0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition:    all .3s ease-in-out;
+    -o-transition:      all .3s ease-in-out;
+    -ms-transition:     all .3s ease-in-out;
+    transition:         all .3s ease-in-out;
+}
+
+.casino-game .game-name > span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.casino-game-wrapper:hover .game-name {
+    top:0;
+}
+
+.casino-game::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition:    all .3s ease-in-out;
+    -o-transition:      all .3s ease-in-out;
+    -ms-transition:     all .3s ease-in-out;
+    transition:         all .3s ease-in-out;
+}
+
+.casino-game-wrapper:hover .casino-game::after {
+
+    background-color: #8DC63F;
+}
+
+:host {
+    display: contents;
+}
+
+

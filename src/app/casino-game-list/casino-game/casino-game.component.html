@@ -1,0 +1,15 @@
+
+<div class="col">
+    <div class="casino-game-wrapper" appRibbons [game]="game">
+        <div
+            class="casino-game"
+            
+            [ngStyle]="{'background-image': 'url(' + game.imageUrl + ')'}">
+            
+            <div
+                class="jackpot"
+                *ngIf="game.jackpot !== -1">{{ game.jackpot | currency:'GBP'}}</div>
+            <div class="game-name"><span>Play</span><br>{{ game.name }}</div>
+        </div>
+    </div>
+</div>

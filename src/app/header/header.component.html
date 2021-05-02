@@ -1,0 +1,10 @@
+<nav appMenu>
+  <div class="menu-button">MENU</div>
+  <ul>
+    <li
+      *ngFor="let category of categories | orderedmenulabels"
+      routerLinkActive="active">
+        <a [routerLink]="['game',category]">{{ category | menulabel | titlecase}}</a>
+    </li>
+  </ul>
+</nav>
